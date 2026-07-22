@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as LucideIcons from 'lucide-react';
 import { Search, X, Check } from 'lucide-react';
@@ -659,4 +659,4 @@ export default function AppBottomNavSetup() {
       `}</style>
     </div>
   );
-}
+                                                           }
