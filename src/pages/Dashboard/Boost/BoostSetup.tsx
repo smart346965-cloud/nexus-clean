@@ -92,7 +92,7 @@ const BoostSetup: React.FC = () => {
               >
                 <div
                   className="feature-inner"
-                  ref={(el) => (contentRefs.current[i] = el)}
+                  ref={(el) => { contentRefs.current[i] = el; }}
                 >
                   {item.desc}
                 </div>
@@ -119,7 +119,7 @@ const BoostSetup: React.FC = () => {
               >
                 <div
                   className="feature-inner"
-                  ref={(el) => (contentRefs.current[i + featuresUX.length] = el)}
+                  ref={(el) => { contentRefs.current[i + featuresUX.length] = el; }}
                 >
                   {item.desc}
                 </div>
