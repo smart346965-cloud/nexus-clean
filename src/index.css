@@ -1,0 +1,59 @@
+/* 1. استيراد الخطوط الخارجية */
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+/* 2. استيراد تدوين Tailwind */
+
+@layer base {
+  :root {
+    /* الخلفية: أبيض جليدي بلمسة زرقاء خافتة جداً لمنع إجهاد العين */
+    --nexus-bg-main: #F8FAFC;
+   
+    /* التدرج الجليدي: يعطي عمقاً للصفحة وكأنها قطعة زجاج */
+    --nexus-bg-gradient: radial-gradient(circle at 50% -10%, #FFFFFF 0%, #F1F5F9 100%);
+   
+    /* لون العناوين: أسود كربوني عميق لتباين حاد وفخامة */
+    --nexus-text-bright: #0F172A;
+   
+    /* لون النصوص الفرعية: رمادي فولاذي (Steel Blue-Grey) مميز */
+    --nexus-text-muted: #475569;
+   
+    /* لون الهوية: الأزرق السماوي الكريستالي (Ice Blue) */
+    --nexus-accent: #0EA5E9;
+   
+    /* لون الحدود: رمادي ثلجي شفاف جداً */
+    --nexus-border: rgba(148, 163, 184, 0.15);
+   
+    /* تأثير الزجاج الفاتح (Glassmorphism) */
+    --nexus-glass: rgba(255, 255, 255, 0.7);
+  }
+
+  body {
+    background: var(--nexus-bg-main);
+    background-image: var(--nexus-bg-gradient);
+    color: var(--nexus-text-bright);
+    font-family: 'Almarai', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  body, button, input, select, textarea {
+    font-family: 'Almarai', sans-serif !important;
+  }
+
+  /* لضمان تطبيق الخط على نصوص الأزرار تحديداً وبقوة */
+  button {
+    font-family: inherit;
+  }
+}
+
+/* تحسينات إضافية لضمان عدم حدوث تضارب في السكاشن */
+@layer components {
+  /* تأكد أن أي سكشن يستخدم هذه الكلاسات سيتغير تلقائياً */
+  .bg-nexus-card {
+    background: var(--nexus-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--nexus-border);
+  }
+}
