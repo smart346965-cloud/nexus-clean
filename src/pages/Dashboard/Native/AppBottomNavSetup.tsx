@@ -659,4 +659,4 @@ export default function AppBottomNavSetup() {
       `}</style>
     </div>
   );
-                                                           }
+        }
